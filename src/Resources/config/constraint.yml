@@ -1,0 +1,10 @@
+parameters:
+  boekkooi.twigjack.constraint_validator.class: Boekkooi\Bundle\TwigJackBundle\Twig\Extension\DeferExtension
+
+services:
+  # defer extension
+  boekkooi.twigjack.constraint_validator:
+    class: %boekkooi.twigjack.constraint_validator.class%
+    arguments: [ null ]
+    tags:
+      - { name: validator.constraint_validator, alias: 'TwigSyntaxValidator' }
